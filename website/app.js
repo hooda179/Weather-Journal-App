@@ -41,9 +41,9 @@ btn.addEventListener("click",async () => {
             const res = await fetch("/all");
             const weatherData = await res.json();
 
-            date.textContent = weatherData.date;
-            temperature.textContent = weatherData.temp;
-            content.textContent = weatherData.feeling;
+            date.innerHTML = weatherData.date;
+            temperature.innerHTML = weatherData.temp;
+            content.innerHTML = weatherData.feeling;
         }
         catch(error){
             alert(data.message);
